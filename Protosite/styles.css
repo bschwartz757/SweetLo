@@ -1,0 +1,733 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* RESETS */
+
+body, body * {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;	/* declared width = rendered width */	
+}
+
+a image {
+	border:0;
+}
+
+/* END RESETS */
+
+
+/* RESPONSIVE */
+
+/* will not validate --------- */
+html { 
+	/* don't resize body copy on iPhone */
+	-webkit-text-size-adjust: none;  
+}
+
+@-ms-viewport,		/* IE10; DOES NOT VALIDATE */
+@viewport	{		/* future browsers */
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+/* --------- end will not validate */
+/* END RESPONSIVE */
+
+/* FOR DEVO ONLY */
+
+/*body {		
+	background-image:url(images/sweetlosicecream_grid_960.png);
+	background-position:50%;
+	background-repeat:repeat-y;	
+}*/
+
+/* TEXT STYLES */
+
+html{
+	font-size:100%;		/* 1 em/rem = 16px */
+	box-sizing:border-box;		
+}
+
+body {
+	font-size: 100%;		/* percentage of size set on html tag */
+	font-family:Rockwell, Tahoma, sans-serif;	
+}
+
+h2 {
+	font-family:Rockwell, Tahoma, sans-serif;
+	font-weight:bold;
+	font-size:1.5em;
+	line-height:100%;	
+	text-align:center;	
+	color:#E87357;		
+}
+
+h3 {
+	font-family:Rockwell, Tahoma, sans-serif;
+	font-weight:bold;
+	font-size:1.125em;
+	line-height:100%;	
+	text-align:center;	
+	color:#E87357;		
+}
+
+#tagline h1 {
+	font-size:1.5em;
+	line-height:125%;
+	text-align:center;
+	padding:.25em .25em;
+	color:#FFFFFF;			
+}
+
+p {
+	font-size:1em;
+	line-height:150%;
+	color:4C340D;
+	display:block;
+	text-align:center;	
+}
+
+ul {
+	font-size:1em;
+	line-height:150%;	
+}
+
+/* END TEXT STYLES */
+
+
+/* LAYOUT STYLES */
+
+body {
+	background-color:#FFEE80;	
+}
+
+#wrapper {
+	max-width:960px;
+	width:100%;	
+	margin: 0 auto;			/* Centers the wrapper on page. Don't use margin-left/right. */
+	padding:.25em 0;
+	background-color:#F5F3EA;
+	
+}
+
+header {					
+	max-width:940px;				/*100% of wrapper*/
+	width:100%;
+	min-height:31.25em;
+	margin:.75em auto;	
+	overflow:hidden;
+}
+
+#middle {
+	max-width:940px;
+	width:100%;
+	margin:.75em auto;	
+	overflow:hidden;		
+}
+
+section {
+	max-width:940px;
+	width:100%;
+	overflow:hidden;	
+}
+
+header h1 span {
+	display:none;
+}
+
+.logo {
+	position:absolute;
+	background-color:#F5F5DE;
+	margin-top:.625em;
+	top:-50px;
+	left:40%;	
+}
+
+h2, h3, h4 {
+	margin:.25em 0;
+}
+
+#tagline {
+	width:25%;
+	float:right;
+	position:absolute;
+	top:62.5%;
+	right:15%;
+	border:thick solid rgba(58,165,178,1.00);	
+}
+
+#nav-main {
+	margin-bottom:.75em;		
+}
+
+section {
+	margin-bottom:2em;
+	overflow:hidden;	
+}
+
+/*for responsive grid; target left-most column and clear margin-left*/
+.grid4 .col:nth-of-type(4n+1),
+.grid3 .col:nth-of-type(3n+1),
+.grid2 .col:nth-of-type(2n+1) {
+	margin-left:0;
+	clear:left;	
+}
+
+/*default behavior for all columns*/
+.col {
+	float:left;
+	margin-left:3.2%;				/*20px*/
+}
+
+/*4 columns wide*/
+.grid4 .col {
+	width:22.6%;		/*220px/940px*/
+}
+
+/*3 columns wide*/
+.grid3 .col {
+	width:31.2%;		/* 300px/940px */	
+}
+
+/*2 columns wide*/
+.grid2 .col {
+	width:48.4%;		/*460px/940px*/
+}
+
+p {
+	margin-bottom:.75em;
+}
+
+/* END LAYOUT STYLES */
+
+
+/* IMAGE STYLES */
+
+header {
+	background-image:url(images/header_banner_1200.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-position:center;
+	height:auto;
+}
+	
+img,
+embed,
+object,
+video,
+iframe,
+.wp-caption {			
+	max-width:100%;	
+	height:auto;	
+}
+
+/* END IMAGE STYLES */
+
+
+/* LINK STYLES */
+
+a:link,
+a:visited {
+	color:#FFFFFF;
+	text-decoration:none;	
+}
+
+a:hover,
+a:focus {
+	color:rgba(58,165,178,1.00);
+	text-decoration:underline;
+	background:#E6E6E6;	
+}
+
+.top-link {						/*back-to-top link; lives in footer.php*/
+	clear:left;
+	float:right;
+}
+
+#home a.home-link,
+#my-ice-cream a.my-ice-cream-link,
+#the-goods a.the-goods-link,
+#dietary-options a.dietary-options-link,
+#for-kids a.for-kids-link,
+#order a.order-link,
+#events a.events-link,
+#find-me a.find-me-link {
+	color:#E87357;			
+	background-color:#E6E6E6;			
+}
+
+.build-it {
+	font-size:1.125em;
+	font-weight:bold;
+	line-height:3em;
+	text-align:center;
+	text-transform:uppercase;
+	width:25%;
+	height:auto;
+	margin-top:5em;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:5px;
+	color:#FFFFFF;
+	background-color:rgba(58,165,178,1.00);
+}
+
+/* END LINK STYLES */
+
+/* NAV-MAIN */
+
+#nav-main {
+	height:5em;
+	background-color:rgba(58,165,178,1.00);	
+	width:100%;
+	position:relative;
+	margin-top:2.5em;
+}
+
+#nav-main ul {
+	margin:0;
+	text-align:center;	
+}
+
+#nav-main li {				
+	float:left;
+	width:12.5%;	
+	line-height:5em;	
+	text-align:center;		
+	list-style-type:none;
+	margin:0;	
+}
+
+#nav-main a {
+	font-size:0.9em;	
+	display:block;				
+	text-transform:uppercase;
+}
+
+#nav-main .order-anchor {
+	margin-right:14em;	
+}
+
+#nav-main .social-icons {
+	font-size:0.75em;
+	margin-top:.75em;	
+}
+
+/*Dropdown*/
+
+#nav-main ul li ul {
+	position:absolute;
+	width:150px;
+	background:rgba(58,165,178,1.00);	
+}
+
+#nav-main ul li ul li {
+	width:150px;
+	margin:0;	
+}
+
+#nav-main ul li ul li a {
+	display:block;
+	width:100%;
+	text-align:left;
+	font-size:0.8em;
+	line-height:2em;
+	padding:15px 10px;	
+	margin:0;		
+}
+
+#nav-main ul li ul.fallback {
+	display:none;
+}
+
+#nav-main ul li:hover ul.fallback {
+	display:block;	
+}
+
+/*End Dropdown*/
+
+
+/* END NAV-MAIN */
+
+
+/* RESPONSIVE TOGGLE NAV (MOBILE) - MENU */
+
+#nav-mobile {
+	min-height:3em;
+	line-height:3em;
+	background-color:rgba(58,165,178,1.00);	
+}
+
+#nav-mobile a {
+	padding:0 .75em;	
+}
+
+#nav-mobile ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#nav-mobile ul.expanded {
+    display: block;
+}
+
+#nav-mobile ul li ul li a {
+	margin-left:1.25em;
+}
+
+#nav-mobile li a:link,
+#nav-mobile li a:visited {
+	display: block;
+	padding: 0.6250rem; 	
+	border-top: 1px solid #666;
+	text-decoration: none;
+}
+
+#nav-mobile a:hover,
+#nav-mobile a:focus {
+	color:rgba(58,165,178,1.00);	
+	text-decoration:underline;		
+}
+
+#nav-mobile li a:hover,
+#nav-mobile li a:focus {
+	color:rgba(58,165,178,1.00);	
+	text-decoration:underline;	
+}
+
+.menu-button {
+	display: block;
+	text-align: right;
+	color: #ddd;
+	text-decoration: none;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+	text-decoration: none;
+}
+
+
+/*END TOGGLE NAV (MOBILE)*/
+
+
+/* END NAVIGATION */
+
+
+/*  FOOTER  */
+
+footer {
+	background:rgba(58,165,178,1.00);
+	max-width:940px;
+	width:100%;	
+	height:auto;
+	margin:.75em auto;	
+	overflow:hidden;	
+}
+
+#sitemap {
+	height:auto;
+	width:75%;
+}
+
+#sitemap ul {
+	margin:.75em auto;
+	padding:0;	
+}
+
+#sitemap li {				/* This and the previous declaration will give the nav-main container an adequate height */
+	float:left;
+	width:20%;	
+	font-size:0.9em;			
+	text-align:center;
+	letter-spacing:.1em;
+	color:#FFFFFF;	
+	text-transform:uppercase;	
+	list-style-type:none;	/*gets rid of the underlines so we can use them on hover state*/
+	margin-bottom:0;
+}
+
+#sitemap ul li ul li {
+	width:100%;	
+	font-size:0.7em;
+	line-height:3em;
+	text-align:center;	
+}
+
+/*      #map_canvas {
+		float:right; 
+		margin:.75em .75em; 
+        width: 25%;
+        height: 14.6875em;
+		border:2px solid #959595;
+      }*/
+
+.credits {
+	font-size:0.7em;
+	color:#FFFFFF;	
+	text-align:center;
+	clear:both;	
+}
+
+/*	END FOOTER  */
+
+/* FORM STYLES */
+
+form p {
+	margin:1.25em 0;
+}
+
+label {
+	display:block;
+}
+
+fieldset {
+	padding:12px;	/* fallback */
+	padding:0.75em 0.75rem;		/* 16/12 */
+}
+
+legend {
+	padding:.5em;
+}
+
+form p {
+	margin-bottom:1.25em;
+}
+
+label {
+	display:block;
+}
+
+input [type="text"], input [type="email"] {
+	display:block;
+	width:100%;
+	margin-bottom:1.25em;
+	padding:.25em;
+	height:2em;	
+}
+
+input [type="checkbox"] {
+	margin:.25em .25em .25em 0;
+	height:1.28em;
+}
+
+textarea {
+	width:100%;
+	padding:.25em;	
+}
+
+select {
+	font-size:1em;
+}
+
+p.button input {
+	float:right;
+	margin:1em 0 1em 1em;
+}
+
+/* END FORM STYLES */
+
+
+/*MEDIA QUERIES*/
+
+
+@media all AND (min-width: 768px){
+
+	#nav-main {
+		display:block;	
+	}
+	
+	#nav-mobile {
+		display:none;	
+	}
+
+	.social-icons-ftr {
+		display:none;	
+	}
+	
+}
+
+@media all AND (max-width: 768px) {
+
+	#wrapper {
+		max-width:740px;
+		width:100%;	
+	}
+
+	header {
+		max-width:700px;
+		width:94.59459459459459%;	
+		height:24em;
+	}
+	
+	#tagline {
+		display:none;	
+	}
+	
+	#middle {
+		max-width:700px;
+		width:94.59459459459459%%;	
+	}
+
+	#nav-mobile {
+		display:block;
+	}
+	
+	.mobile-social-icons {
+		float:left;
+		margin-top:0.5em;	
+	}
+	
+	#nav-main {
+		display:none;
+	}
+
+	footer {
+		max-width:700px;
+		width:94.59459459459459%;
+	}
+		
+	
+	/*switch 4 columns to 3 columns*/
+.grid4 .col {
+	width:31.2%;		/* 220px/700px */	
+}
+	
+	.grid4 .col:nth-of-type(4n+1) {
+		margin-left:3.2%;
+		clear:none;
+	}
+	
+	.grid4 .col:nth-of-type(3n+1) {
+		margin-left:0;
+		clear:left;
+	}
+		
+	/*switch 3 columns to 2 columns*/	
+.grid3 .col {
+	width:48.4%;		/**/
+}
+	
+	.grid3 .col:nth-of-type(3n+1) {
+		margin-left:3.2%;
+		clear:none;
+	}
+	
+	.grid3 .col:nth-of-type(2n+1) {
+		margin-left:0;
+		clear:left;
+	}
+	
+		.mobile-hide {
+		display:none;	
+	}
+	
+}
+
+@media all AND (max-width: 600px){
+
+
+	#wrapper {
+		max-width:600px;
+		width:100%;	
+	}
+
+	header {
+		max-width:560px;
+		width:93.33333333333333%;
+		min-height:3em;	
+		height:24em;
+	}
+
+	#nav-main {
+		max-width:600px;
+		width:100%;	
+	}
+	
+	#middle {
+		max-width:560px;
+		width:93.33333333333333%;	
+	}
+	
+	footer {
+		max-width:560px;
+		width:93.33333333333333%;
+	}	
+
+	/* change grid4 to 2-column */
+.grid4 .col {
+	width:48.4%;		/*460px/940px*/
+}
+	
+	.grid4 .col:nth-of-type(3n+1) {
+		margin-left:3.2%;
+		clear:none;
+	}
+	
+	.grid4 .col:nth-of-type(2n+1) {
+		margin-left:0;
+		clear:left;
+	}
+
+	/* change grid3 to 2-column */
+.grid3 .col {
+	width:48.4%;		/*460px/940px*/
+}
+	
+	.grid3 .col:nth-of-type(3n+1) {
+		margin-left:3.2%;
+		clear:none;
+	}
+	
+	.grid3 .col:nth-of-type(2n+1) {
+		margin-left:0;
+		clear:left;
+	}
+
+		.mobile-hide {
+		display:none;	
+	}
+	
+	#map_canvas {
+		display:none;	
+	}
+	
+	#sitemap {
+		width:100%;
+		float:left;	
+		font-size:.8em;
+		margin-bottom:1.5em;
+	}
+	
+	#sitemap li {
+		width:16%;	
+	}
+	
+	.social-icons-ftr {
+		float:right;
+		width:10%;
+		font-size:.5em;	
+	}	
+
+}
+
+@media all AND (max-width: 500px){
+
+	.one-third {
+		width:100%;
+	}
+	
+	.two-thirds {
+		width:100%;
+	}
+	
+	.one-half {
+		width:100%;
+	}
+
+
+}
+	
+	/*END MEDIA QUERIES*/	
